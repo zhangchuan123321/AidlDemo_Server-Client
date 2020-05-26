@@ -117,10 +117,14 @@ public class AidlService extends Service {
     friend.add(new Friend("小刚","中性朋友"));
     return  friend;
 }
-}
+
+ 
 
 
- manifests文件中：
+在AIDLService中声明INumber.Stub类型变量（Binder类型），并重写INumber 的方法.
+
+manifests文件中：
+
 <service
     android:name=".AidlService"
     android:enabled="true"
@@ -129,10 +133,7 @@ public class AidlService extends Service {
     <intent-filter>
         <action android:name="service.jisuan"/>
     </intent-filter>
-
 </service>
-
-在AIDLService中声明INumber.Stub类型变量（Binder类型），并重写INumber 的方法.
 
 四、新建客户端工程，将服务端中AIDL文件夹移植到客户端（注意：包名一致）
 
