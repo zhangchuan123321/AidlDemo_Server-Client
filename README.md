@@ -71,19 +71,19 @@ public class Friend  implements Parcelable {
 }
 
 二、AIDL文件创建：
+
 package com.zhangchuan.aidlserver;
+
 import com.zhangchuan.aidlserver.Friend;
 
-// Declare any non-default types here with import statements
-
 interface INumber {
-    /**
-     * Demonstrates some basic types that you can use as parameters
-     * and return values in AIDL.
-     */
-     int multNumber(int num1,int num2);
-     List<Friend> getFriendList();
+
+ int multNumber(int num1,int num2);
+ 
+ List<Friend> getFriendList();
+    
 }
+
 三、AIDLService创建并在manifest文件中（注意：必须添加intent-filter，意义在于使其他进程可以找到此服务
 
 package com.zhangchuan.aidlserver;
