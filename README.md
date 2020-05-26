@@ -170,13 +170,13 @@ if(iNumber!=null){
     }
 }
 
-运行结果
-：
-D/MainActivity: 链接成功
+运行结果：
 
-D/MainActivity: num1*num2:22*14=308
+链接成功
 
-D/MainActivity: 获取数据：
+num1*num2 : 22*14=308
+
+获取数据：
 
     服务端获取的朋友:小红是我女朋友
     服务端获取的朋友:小明是我男朋友
