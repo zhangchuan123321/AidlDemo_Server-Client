@@ -120,8 +120,11 @@ public class AidlService extends Service {
     </intent-filter>
 
 </service>
+
 在AIDLService中声明INumber.Stub类型变量（Binder类型），并重写INumber 的方法.
+
 四、新建客户端工程，将服务端中AIDL文件夹移植到客户端（注意：包名一致）
+
 五、声明INumber接口类型变量、连接与服务端的AIDL服务，连接成功成功后，将INumber实例化对象赋值。
 
 private ServiceConnection serviceConnection=new ServiceConnection() {
@@ -141,6 +144,7 @@ private ServiceConnection serviceConnection=new ServiceConnection() {
         iNumber=null;
     }
 };
+
 六、INumber实例化对象调用服务端方法：
 
 if(iNumber!=null){
