@@ -106,10 +106,21 @@ public class AidlService extends Service {
 
         @Override
         public List<Friend> getFriendList() throws RemoteException {
-            return MainActivity.getFriends();
+            return getFriends();
         }
     };
+    
+    public static List<Friend> getFriends(){
+    friend=new ArrayList<>();
+    friend.add(new Friend("小红","女朋友"));
+    friend.add(new Friend("小明","男朋友"));
+    friend.add(new Friend("小刚","中性朋友"));
+    return  friend;
 }
+}
+
+
+ manifests文件中：
 <service
     android:name=".AidlService"
     android:enabled="true"
